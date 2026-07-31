@@ -1,1 +1,909 @@
+/* =============
+/* =========================================
+   SHAYDA HR - Main Stylesheet
+   Version 1.0
+========================================= */
+
+
+/* ---------- Reset ---------- */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+:root {
+  --primary: #003b7a;
+  --primary-dark: #002b5c;
+  --secondary: #f7941d;
+  --secondary-dark: #d97900;
+
+
+  --success: #159447;
+  --danger: #d83a3a;
+
+
+  --background: #f4f7fb;
+  --surface: #ffffff;
+  --text: #172033;
+  --muted: #697386;
+  --border: #e2e7ef;
+
+
+  --shadow: 0 12px 35px rgba(0, 39, 82, 0.08);
+  --radius: 18px;
+}
+
+
+/* ---------- Base ---------- */
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  direction: rtl;
+  min-height: 100vh;
+
+
+  font-family:
+    "Vazirmatn",
+    "Tahoma",
+    sans-serif;
+
+
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(247, 148, 29, 0.07),
+      transparent 30%
+    ),
+    var(--background);
+
+
+  color: var(--text);
+  line-height: 1.8;
+}
+
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ---------- Container ---------- */
+
+
+.container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+
+.header {
+  position: relative;
+  z-index: 10;
+
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid var(--border);
+
+
+  box-shadow: 0 4px 18px rgba(0, 39, 82, 0.04);
+}
+
+
+.header-content {
+  min-height: 82px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  gap: 25px;
+}
+
+
+/* ---------- Brand ---------- */
+
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+
+.brand img {
+  width: 58px;
+  height: 58px;
+
+
+  object-fit: contain;
+
+
+  border-radius: 12px;
+}
+
+
+.brand h1 {
+  color: var(--primary);
+
+
+  font-size: 22px;
+  font-weight: 800;
+
+
+  line-height: 1.3;
+}
+
+
+.brand span {
+  display: block;
+
+
+  margin-top: 3px;
+
+
+  color: var(--muted);
+
+
+  font-size: 12px;
+  font-weight: 500;
+}
+
+
+/* ---------- Header Badge ---------- */
+
+
+.header-badge {
+  padding: 8px 16px;
+
+
+  color: var(--primary);
+
+
+  background: rgba(0, 59, 122, 0.06);
+
+
+  border: 1px solid rgba(0, 59, 122, 0.1);
+  border-radius: 30px;
+
+
+  font-size: 13px;
+  font-weight: 600;
+
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+
+.hero {
+  position: relative;
+
+
+  margin: 55px auto 35px;
+
+
+  max-width: 850px;
+
+
+  text-align: center;
+}
+
+
+.hero::before {
+  content: "";
+
+
+  position: absolute;
+
+
+  top: -35px;
+  right: 50%;
+
+
+  width: 90px;
+  height: 5px;
+
+
+  transform: translateX(50%);
+
+
+  background: var(--secondary);
+
+
+  border-radius: 20px;
+}
+
+
+.hero h2 {
+  margin-bottom: 18px;
+
+
+  color: var(--primary);
+
+
+  font-size: clamp(27px, 4vw, 42px);
+  font-weight: 800;
+
+
+  line-height: 1.5;
+}
+
+
+.hero p {
+  max-width: 720px;
+
+
+  margin: 0 auto;
+
+
+  color: var(--muted);
+
+
+  font-size: 16px;
+  line-height: 2;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+
+.card {
+  padding: 35px;
+
+
+  margin-bottom: 40px;
+
+
+  background: var(--surface);
+
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+
+  box-shadow: var(--shadow);
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+
+.section-title {
+  display: flex;
+  align-items: center;
+
+
+  gap: 15px;
+
+
+  margin-bottom: 30px;
+}
+
+
+.section-title .number {
+  width: 43px;
+  height: 43px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  flex-shrink: 0;
+
+
+  color: #ffffff;
+
+
+  background: var(--primary);
+
+
+  border-radius: 12px;
+
+
+  font-size: 18px;
+  font-weight: 800;
+}
+
+
+.section-title h2 {
+  color: var(--primary);
+
+
+  font-size: 22px;
+  font-weight: 800;
+}
+
+
+.section-title p {
+  margin-top: 2px;
+
+
+  color: var(--muted);
+
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+
+.form-grid {
+  display: grid;
+
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+
+  gap: 22px;
+
+
+  margin-bottom: 22px;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+
+
+  gap: 9px;
+}
+
+
+.full-width {
+  width: 100%;
+}
+
+
+.form-group label {
+  color: var(--text);
+
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+
+
+  padding: 14px 16px;
+
+
+  color: var(--text);
+
+
+  background: #fbfcfe;
+
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+
+  outline: none;
+
+
+  font-size: 14px;
+
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.form-group input,
+.form-group select {
+  height: 52px;
+}
+
+
+.form-group textarea {
+  min-height: 180px;
+
+
+  resize: vertical;
+
+
+  line-height: 1.9;
+}
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #a0a8b5;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  background: #ffffff;
+
+
+  border-color: var(--primary);
+
+
+  box-shadow:
+    0 0 0 4px rgba(0, 59, 122, 0.08);
+}
+
+
+/* =========================================
+   PRIMARY BUTTON
+========================================= */
+
+
+.primary-btn {
+  width: 100%;
+
+
+  min-height: 56px;
+
+
+  margin-top: 25px;
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  color: #ffffff;
+
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--primary-dark)
+    );
+
+
+  border: none;
+  border-radius: 13px;
+
+
+  font-size: 16px;
+  font-weight: 700;
+
+
+  box-shadow:
+    0 10px 22px rgba(0, 59, 122, 0.2);
+
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+
+
+  box-shadow:
+    0 14px 28px rgba(0, 59, 122, 0.26);
+}
+
+
+.primary-btn:active {
+  transform: translateY(0);
+}
+
+
+.primary-btn:disabled {
+  cursor: not-allowed;
+
+
+  opacity: 0.6;
+
+
+  transform: none;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+
+.loading {
+  margin-top: 18px;
+
+
+  padding: 14px 18px;
+
+
+  color: var(--primary);
+
+
+  background: rgba(0, 59, 122, 0.06);
+
+
+  border-radius: 10px;
+
+
+  text-align: center;
+
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+.loading::before {
+  content: "⟳";
+
+
+  display: inline-block;
+
+
+  margin-left: 8px;
+
+
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+
+.error-message {
+  margin-top: 18px;
+
+
+  padding: 14px 18px;
+
+
+  color: var(--danger);
+
+
+  background: rgba(216, 58, 58, 0.07);
+
+
+  border: 1px solid rgba(216, 58, 58, 0.15);
+
+
+  border-radius: 10px;
+
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   RESULTS
+========================================= */
+
+
+.results-section {
+  margin-bottom: 60px;
+
+
+  animation: fadeIn 0.5s ease;
+}
+
+
+.result-card {
+  padding: 28px;
+
+
+  margin-bottom: 22px;
+
+
+  background: var(--surface);
+
+
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+
+
+  box-shadow: var(--shadow);
+}
+
+
+.result-card h3 {
+  margin-bottom: 18px;
+
+
+  color: var(--primary);
+
+
+  font-size: 19px;
+  font-weight: 800;
+}
+
+
+.risk-card {
+  border-right: 5px solid var(--secondary);
+}
+
+
+/* =========================================
+   HIDDEN
+========================================= */
+
+
+.hidden {
+  display: none !important;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+
+.footer {
+  padding: 28px 0;
+
+
+  margin-top: 40px;
+
+
+  background: var(--primary);
+
+
+  color: rgba(255, 255, 255, 0.8);
+
+
+  text-align: center;
+}
+
+
+.footer p {
+  font-size: 12px;
+}
+
+
+.footer span {
+  margin: 0 5px;
+
+
+  color: var(--secondary);
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+
+    transform: translateY(15px);
+  }
+
+
+  to {
+    opacity: 1;
+
+
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+
+@media (max-width: 768px) {
+
+
+  .container {
+    width: min(100% - 24px, 680px);
+  }
+
+
+  .header-content {
+    min-height: auto;
+
+
+    padding: 15px 0;
+
+
+    align-items: flex-start;
+  }
+
+
+  .header-badge {
+    display: none;
+  }
+
+
+  .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+
+  .brand h1 {
+    font-size: 18px;
+  }
+
+
+  .brand span {
+    max-width: 220px;
+
+
+    font-size: 10px;
+  }
+
+
+  .hero {
+    margin-top: 45px;
+  }
+
+
+  .hero h2 {
+    font-size: 27px;
+  }
+
+
+  .hero p {
+    font-size: 14px;
+  }
+
+
+  .card {
+    padding: 22px 18px;
+  }
+
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .section-title h2 {
+    font-size: 19px;
+  }
+
+
+  .section-title p {
+    font-size: 12px;
+  }
+
+
+  .result-card {
+    padding: 20px 17px;
+  }
+
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+
+@media (max-width: 480px) {
+
+
+  .brand {
+    gap: 10px;
+  }
+
+
+  .brand img {
+    width: 42px;
+    height: 42px;
+  }
+
+
+  .brand h1 {
+    font-size: 16px;
+  }
+
+
+  .brand span {
+    max-width: 180px;
+
+
+    line-height: 1.5;
+  }
+
+
+  .hero h2 {
+    font-size: 23px;
+  }
+
+
+  .hero p {
+    font-size: 13px;
+  }
+
+
+  .section-title {
+    align-items: flex-start;
+  }
+
+
+  .section-title .number {
+    width: 38px;
+    height: 38px;
+
+
+    font-size: 15px;
+  }
+
+
+  .primary-btn {
+    min-height: 52px;
+
+
+    font-size: 14px;
+  }
+
+
+}
 
