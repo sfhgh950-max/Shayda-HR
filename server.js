@@ -203,7 +203,7 @@ ${jobDescription}
 });
 
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Shayda HR API is running on port ${PORT}`);
 });
 
