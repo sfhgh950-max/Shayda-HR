@@ -129,7 +129,7 @@ ${jobDescription}
 
 
     const completion = await client.chat.completions.create({
-      model: "deepseek/deepseek-v4-pro",
+      model: "google/gemini-3.1-pro-preview",
       messages: [
         {
           role: "system",
