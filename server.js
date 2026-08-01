@@ -129,7 +129,7 @@ ${jobDescription}
 
 
     const completion = await client.chat.completions.create({
-      model: "openai/gpt-5-nano",
+      model: "openai/gpt-5.6-sol",
       messages: [
         {
           role: "system",
