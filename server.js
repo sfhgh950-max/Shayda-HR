@@ -129,7 +129,7 @@ ${jobDescription}
 
 
     const completion = await client.chat.completions.create({
-      model: "openai/gpt-5.6-sol",
+      model: "deepseek/deepseek-v4-pro",
       messages: [
         {
           role: "system",
