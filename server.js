@@ -129,7 +129,7 @@ ${jobDescription}
 
 
     const completion = await client.chat.completions.create({
-      model: "openai/gpt-5.6-sol-pro",
+      model: "google/gemini-embedding-001",
       messages: [
         {
           role: "system",
