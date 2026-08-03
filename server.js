@@ -129,7 +129,7 @@ ${jobDescription}
 
 
     const completion = await client.chat.completions.create({
-      model: "google/gemini-3.1-pro-preview",
+      model: "anthropic/claude-opus-5",
       messages: [
         {
           role: "system",
