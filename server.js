@@ -129,7 +129,7 @@ ${jobDescription}
 
 
     const completion = await client.chat.completions.create({
-      model: "anthropic/claude-fable-5",
+      model: "openai/gpt-5.6-sol-pro",
       messages: [
         {
           role: "system",
