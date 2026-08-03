@@ -129,7 +129,7 @@ ${jobDescription}
 
 
     const completion = await client.chat.completions.create({
-      model: "anthropic/claude-opus-5",
+      model: "anthropic/claude-fable-5",
       messages: [
         {
           role: "system",
